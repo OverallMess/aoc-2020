@@ -1,9 +1,7 @@
 #include "common_includes.h"
 #include "helpers.h"
-
-
-
-
+#include "day8.h"
+#include <ctime>
 
 int main()
 {

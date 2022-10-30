@@ -142,6 +142,7 @@
     <ClInclude Include="day5.h" />
     <ClInclude Include="day6.h" />
     <ClInclude Include="day7.h" />
+    <ClInclude Include="day8.h" />
     <ClInclude Include="helpers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -38,4 +38,24 @@ namespace helpers
 		const size_t str_range = str_end;
 		str = str.substr(0, str_range);
 	}
+
+	size_t read_file(std::istream& stream, std::vector<char>& buf)
+	{
+		stream.read(&buf[0], buf.size());
+		return stream.gcount();
+	}
+
+	size_t count_lines(std::istream& stream, size_t buf_size)
+	{
+		std::vector<char> buf(buf_size);
+		buf.reserve(buf_size);
+
+		size_t n = 0;
+
+		while (size_t n_read = read_file(stream, buf))
+			n += std::count(buf.begin(), buf.begin() + n_read, '\n');
+
+		return n + 1;
+	}
+
 }
